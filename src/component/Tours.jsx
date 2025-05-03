@@ -6,14 +6,14 @@ export default function Tours(props) {
         props.removeTours(id);
     }
     return (
-        <div>
+        <div className='container'>
             <div>
-                <h2 className='text-4xl'>Plan with PAYEL</h2>
-            </div>
-            <div>
+                <h2 className='title'>Plan with Love</h2>
+            <div className='cards'>
                 {props.tours.map((tour) => {
                    return <Card {...tour} key={tour.id} removeTour={removeHandler}/>;
                 })}
+            </div>
             </div>
         </div>
     )

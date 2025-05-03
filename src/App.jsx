@@ -12,9 +12,9 @@ function App() {
  }
  if (tours.length === 0) {
   return (
-    <div>
+    <div className="refresh">
       <h2>No Tours Left</h2>
-      <button onClick={() => setTours(data)}>Refresh</button>
+      <button className="btnWhite" onClick={() => setTours(data)}>Refresh</button>
     </div>
   );
 }

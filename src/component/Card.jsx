@@ -6,21 +6,21 @@ const Card = ({ id, image, info, price, name, removeTour }) => {
         setReadMore(!readmore);
     }
     return (
-        <div>
+        <div className="card">
           <img src={image} className="image" alt="img" height={400} width={400}/>
-          <div>
-            <div>
-                <h4>{price}</h4>
-                <h4>{name}</h4>
+          <div className="tourInfo">
+            <div className="tourDetails">
+                <h4 className="tourPrice">{price}</h4>
+                <h4 className="tourName">{name}</h4>
             </div>
-            <div>
+            <div className="description">
             {description}
-                    <span  onClick={readmoreHandler}>
+                    <span  className="readMore" onClick={readmoreHandler}>
                         {readmore ? `show less` : `read more`}
                     </span>
             </div>
           </div>
-          <button onClick={() => removeTour(id)}>
+          <button className="btnRed" onClick={() => removeTour(id)}>
                 Not Interested
             </button>
         </div>
